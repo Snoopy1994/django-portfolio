@@ -1,0 +1,33 @@
+<!-- projects/templates/projects/project_index.html -->
+
+{% extends "base.html" %}
+
+{% block page_title %}
+    <h2></h2>
+{% endblock page_title %}
+
+{% block page_content %}
+<h2>Projects</h2>
+<div class="row">
+{% for project in projects %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            {% if project.image %}
+                <img class="card-img-top" src="{{ project.image.url }}">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                <button type="button" class="btn btn-outline-info btn-sm">{{ project.tags.all|join:", " }}</button>
+                <br>
+                <br>
+                <a href="{% url 'project_detail' project.pk %}"
+                   class="btn btn-dark">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
