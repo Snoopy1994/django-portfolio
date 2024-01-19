@@ -9,7 +9,7 @@ Install Git
     
 To get this repository, run the following command inside your git enabled terminal     
                      
-`` git clone [https://github.com/ClintonCode20/new_django_blog.git](https://github.com/Snoopy1994/django-portfolio.git) ``  
+`` git clone https://github.com/Snoopy1994/django-portfolio.git ``  
    
 Install pip    
       
